@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: iis-sample-01
+  labels:
+    name: iis-sample-01
+    app: iis-sample-01
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: iis-sample-01
+    spec:
+      containers:
+        - name: iis-sample-01
+          image: "easonlai/iis-sample-01:v1"
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+      nodeSelector:
+        beta.kubernetes.io/os: windows

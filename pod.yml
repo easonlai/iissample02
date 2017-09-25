@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iis-sample-01
+  labels:
+    name: iis-sample-01
+spec:
+  containers:
+  - name: iis-sample-01
+    image: "easonlai/iis-sample-01:v1"
+    ports:
+    - containerPort: 80
+  nodeSelector:
+    beta.kubernetes.io/os: windows
