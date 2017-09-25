@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: iis-sample-01
+  name: iissample02
   labels:
-    name: iis-sample-01
-    app: iis-sample-01
+    name: iissample02
+    app: iissample02
 spec:
   selector:
-    name: iis-sample-01
+    name: iissample02
   type: LoadBalancer
   ports:
    - port: 80
