@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: iis-sample-01
+  name: iissample02
   labels:
-    name: iis-sample-01
+    name: iissample02
 spec:
   containers:
-  - name: iis-sample-01
-    image: "easonlai/iis-sample-01:v1"
+  - name: iissample02
+    image: "easonlai/iissample02"
     ports:
     - containerPort: 80
   nodeSelector:
